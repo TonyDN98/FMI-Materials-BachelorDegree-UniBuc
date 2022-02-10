@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Dumitrache Larisa">
+	<meta name="keywords" content="Bine ați venit la Hogwarts!, HP, Harry Potter, Hogwarts, Gryffindor, Godric Gryffindor, Hufflepuff, Helga Hufflepuff, Ravenclaw, Rowena Ravenclaw, Slytherin, Salazar Slytherin, magie, Voldermort, Tom Riddle, Minerva McGonagall, Pomona Sprout, Severus Snape, Ron Weasley, Hermione Granger, Hedwig, Albus Dumbledore, Nearly Headless Nick, Bloody Baron, Grey Lady, J.K. Rowling, Draco Malfoy, Sirius Black, Remus Lupin, Peter Pettigrew, Death Eaters, Azkaban, books, movies, spell, wand">
+	<meta name="description" content="Detalii despre casa Slytherin, înființată de Salazar Slytherin. Caracteristicile principale cuprind viclenia și capacitea de a se descurca în orice situație, iar ca mascotă au șarpele.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Bine ați venit la Hogwarts! - Nou</title>
+	
+	<link rel="icon" type="image/x-icon" href="../../uploads/Imagini/favicon.ico" >
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../../css/galerie.css">
+	<script src="../../2.js"></script>
+	
+</head>
+
+<body>
+
+<header id="header">
+	<% include ../fragmente/header %>
+</header>
+
+<% include ..//fragmente/salut %>	
+	
+	
+<main>
+<br><br><br><br><br>
+
+<div>
+	Pick Song: 
+   <div  id="song">
+		<audio id="playme">
+			<source src="">
+		</audio>
+    
+		<input onclick="change();playPause()" type="button" value="Play"  id="buttonPlay"> 
+		
+		<p id="demo" style="float: right; margin-right: 20px; font-size: 20px;"></p>
+	</div>		
+</div>
+
+<br><br>
+
+<div id="cutiuta">
+	Alegeți Tema de Vizualizare: <br>
+	Dark Theme: 
+	<p id="casuta_magica" style="display:none">Dark Mode ON!</p>
+</div>
+
+<br>
+<div id="radio">
+	Schimb Cursor: 
+</div>
+
+
+<div>
+	<p><button id="ceva">Surpriză!</button></p>
+	<img src="../../uploads/Galerie/poza.gif" style="width:250px; margin-left:-200px" id="poza">
+</div>
+
+
+
+<div id="joc">
+	<h1>Mini Joc:</h1>
+	<textarea rows="4" cols="50" readonly id="domo" style="margin-left: 425px;">
+	</textarea>
+	<br>
+	<img id="myImg" alt="Harry Potter și Talismanele Morții" src="../../uploads/Galerie/pozanoua.png" style="margin-left: 200px;" onmousemove="showCoords(event)" onmouseout="clearCoor()">
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+		<span class="close">&times;</span>
+		<img class="modal-content" id="img01">
+		<div id="caption"></div>
+	</div>
+	<!-- The Modal -->
+</div>
+
+<br><br>
+
+
+
+
+
+<!-- Galerie -->
+
+<div class="header" id="myHeader">
+  <h1>Mini-Galerie</h1>
+  <p>Click pe Butoane ca să schimbi numărul de Poze afișate pe o Linie.</p>
+  <button class="btn" onclick="one()">1</button>
+  <button class="btn" onclick="two()">2</button>
+</div>
+
+<div class="row"> 
+  <div class="column">
+    <img id="myImg" alt="Harry Potter și Talismanele Morții" src="../../uploads/Galerie/1.jpg" style="width:100%">
+    <img id="myImg" alt="Harry Potter și Prizonierul din Azkaban" src="../../uploads/Galerie/2.jpg" style="width:100%">
+    <img id="myImg" alt="Emblemă Slytherin" src="../../uploads/Galerie/3.jpg" style="width:100%">
+    <img id="myImg" alt="Emblemă Gryffindor" src="../../uploads/Galerie/4.png" style="width:100%">
+  </div>
+  <div class="column">
+    <img id="myImg" alt="Profesor Flywitch" src="../../uploads/Galerie/5.jpg" style="width:100%">
+    <img id="myImg" alt="Profesor Minerva" src="../../uploads/Galerie/6.jpg" style="width:100%">
+    <img id="myImg" alt="Profesor Sprout" src="../../uploads/Galerie/7.jpg" style="width:100%">
+    <img id="myImg" alt="Bloody Baron" src="../../uploads/Galerie/8.jpg" style="width:100%">
+  </div>  
+  <div class="column">
+    <img id="myImg" alt="Profesor Snape" src="../../uploads/Galerie/9.jpg" style="width:100%">
+    <img id="myImg" alt="Fantomă" src="../../uploads/Galerie/10.jpg" style="width:100%">
+    <img id="myImg" alt="Harry Potter și Prizonierul din Azkaban" src="../../uploads/Galerie/2.jpg" style="width:100%">
+    <img id="myImg" alt="Emblemă Slytherin" src="../../uploads/Galerie/3.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img id="myImg" alt="Emblemă Slytherin" src="../../uploads/Galerie/1.jpg" style="width:100%">
+    <img id="myImg" alt="Emblemă Gryffindor" src="../../uploads/Galerie/4.png" style="width:100%">
+    <img id="myImg" alt="Profesor Minerva" src="../../uploads/Galerie/6.jpg" style="width:100%">
+    <img id="myImg" alt="Profesor Sprout" src="../../uploads/Galerie/7.jpg" style="width:100%">
+  </div>
+</div>
+<!-- Fin Galerie -->
+
+
+
+</main>
+
+
+<footer id="footer">
+	<% include ../fragmente/footer %>
+</footer>
+
+
+</body>
+
+</html>

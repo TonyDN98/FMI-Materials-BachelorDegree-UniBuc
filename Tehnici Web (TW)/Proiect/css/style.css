@@ -1,0 +1,845 @@
+﻿/* ---------------------------------------
+General
+----------------------------------------*/
+body
+{
+	margin: 0; /* Ca să scap de marginile albe de la Header */
+	cursor: url("../uploads/Imagini/cursor.cur"), default;
+	font-family: "Open Sans", sans-serif;
+	overflow-x: hidden;
+}
+
+h1
+{
+	font-family: magic;
+	font-size: 30px;
+	color: #3fa338;
+}
+
+h2, h3, h4, h5, h6
+{
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+}
+
+section
+{
+	padding:30px 30px 30px 30px;
+}
+
+@font-face /* fontul custom */
+{
+	font-family: Wizards; /* Denumirea Fontului Meu */
+	src: url(Fonts/Wizards.ttf); /* Unde îl găsesc */
+}
+
+@font-face /* fontul custom */
+{
+	font-family: magic; /* Denumirea Fontului Meu */
+	src: url(Fonts/magic.ttf); /* Unde îl găsesc */
+}
+
+
+
+
+
+/* ---------------------------------------
+Header
+----------------------------------------*/
+#header 
+{
+  padding: 30px 0;
+  height: 40px;
+  position: sticky; 
+  left: 0;
+  top: 0;
+  right: 0;
+  background: #1e1e1e;
+}
+
+#container img
+{
+	width: 130px;
+	padding-right: 20px;
+	transition: transform .2s;
+}
+
+#container img:hover 
+{
+	box-shadow: 3px 3px 20px 10px #3fa338; /* horizontal, vertical, blur, spread, colour */
+	transform: scale(1.3); /* Efectul de Mărire */
+}
+
+#logo 
+{ 
+	float: right;
+	display: inline-block;
+}
+
+
+
+
+
+/* ---------------------------------------
+Nav Bar - Meniu
+----------------------------------------*/
+
+/* ------ Stil de Bază pt Meniu ------ */
+#meniu
+{
+	position: absolute;
+	float: left;
+    text-align: center;
+	margin: 0;
+	top: 0px;
+}
+
+#meniu > ul, #meniu > ul li, #meniu > ul ul 
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#meniu > ul li /* Intro, Case... */
+{
+	float: left;
+	min-height: 1px;
+	line-height: 3em; /* În raport cu 1px */
+	vertical-align: middle; /* Aliniere text în centrul celulei */
+	position: relative;
+}
+
+#meniu > ul li:hover /* Subfoldere */
+{
+	position: relative;
+	cursor: progress;
+}
+
+#meniu > ul ul /* Celule Subfoldere */
+{
+	visibility: hidden;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+}
+
+#meniu > ul ul li 
+{
+	float: none;
+}
+
+#meniu > ul li:hover > ul 
+{
+	visibility: visible;
+}
+
+
+
+/* ------ Temă Stil ------ */
+#meniu > ul 
+{
+	border-top: 4px solid #3fa338;
+	font-family: magic;
+	outline: none; /* ca să nu mai apară subliniat */
+	font-size: 25px;
+	background: #1e1e1e;
+	width: auto;
+}
+
+#meniu ul li li /* Pt Subfoldere */
+{
+	font-family: Wizards;
+}
+
+#meniu > ul li a /* Pt celulele Intro... */
+{
+	display: inline-block;
+	padding: 10px 22px;
+}
+
+#meniu > ul > li > a:hover, /* Text - Case... */
+a#active /* Atunci când ești în pagina corespunzătoare */
+{
+  color: #000000; /* Negru devine textul din alb */
+}
+
+#meniu > ul li li /* Celule subfoldere */
+{
+	background-color: #1e1e1e;
+	border-bottom: 1px solid #3fa338;
+	font-size: 25px;
+}
+
+#meniu > ul li#griff:hover /* Culoare Celulă Griff */
+{
+	background-color: #7f0909;
+}
+#meniu > ul li#griff a:hover /* Pt culoare text celula */
+{
+	color: #ffc500;
+}
+
+#meniu > ul li#huff:hover /* Culoare Celulă Huff */
+{
+	background-color: #eee117;
+}
+#meniu > ul li#huff a:hover /* Pt culoare text celula */
+{
+	color: #000000;
+}
+
+#meniu > ul li#slyh:hover /* Culoare Celulă Slyh */
+{
+	background-color: #1a472a;
+}
+#meniu > ul li#slyh a:hover /* Pt culoare text celula */
+{
+	color: #aaaaaa;
+}
+
+#meniu > ul li#rclaw:hover /* Culoare Celulă Rclaw */
+{
+	background-color: #222f5b;
+}
+#meniu > ul li#rclaw a:hover /* Pt culoare text celula */
+{
+	color: #946b2d;
+}
+
+#meniu > ul a:link,    /* Toate a-urile */
+#meniu > ul a:visited,
+#meniu > ul a 
+{
+	color: white;
+	text-decoration: none;
+}
+
+#meniu > ul > li:hover,  /* Hover deasupra Intro... */
+a#active
+{
+	background-color: #3fa338;
+	box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.15); /* Inset - am umbră în interior; rgba - a=opacitate */
+}
+
+#meniu > ul ul /* Celule Subfoldere */
+{
+	border: 1px solid #CCC \9; /* \9 - ca sa nu mai am spatiere intre folderul principal si subfoldere */
+	box-shadow: 0 0px 2px 1px rgba(0, 0, 0, 0.15);
+	width: 150px;
+}
+
+
+
+/* ------ Media Query ------*/
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) 
+{
+  
+#meniu 
+{
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #1e1e1e;
+	width: 80%;
+	border-radius: 0 0 5px 5px;
+}
+
+#meniu:target 
+{
+	display: block;
+}
+
+#meniu > ul li a /* Pt celulele Intro... */
+{
+	display: inline-block;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+.access_aid /* Butonul */
+{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40px;
+	height: 0;
+	padding-top: 40px;
+	overflow: hidden;
+	border: 1px solid black;
+	background: white 10px 10px / 20px 20px no-repeat;
+}
+
+#access_nav 
+{
+	background-image: repeating-linear-gradient(#ccc, #ccc 2px, #fff 2px, #fff 4px);
+}
+
+#access_top 
+{
+	background-image: linear-gradient(45deg, transparent 13px, #ccc 13px, #ccc 15px, transparent 0), linear-gradient(-45deg, white 13px, #ccc 13px, #ccc 15px, white 0);
+}
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+@media (min-width: 320px) and (max-width: 480px) 
+{
+  
+#meniu 
+{
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #1e1e1e;
+	width: 100%;
+	border-radius: 0 0 5px 5px;
+	box-shadow: 0 0 8px 2px #000;
+}
+
+#meniu:target 
+{
+	display: block;
+}
+
+#meniu > ul li a /* Pt celulele Intro... */
+{
+	display: inline-block;
+	display: flex;
+	flex-wrap: wrap;  /* Ca să apară sub formă de bloc de celule, ordonat */
+	padding-left: 40px;
+	padding-right: 40px; 
+}
+
+.access_aid /* Butonul */
+{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40px;
+	height: 0;
+	padding-top: 40px;
+	overflow: hidden;
+	border: 1px solid black;
+	background: white 10px 10px / 20px 20px no-repeat;
+}
+
+#access_nav 
+{
+	background-image: repeating-linear-gradient(#ccc, #ccc 2px, #fff 2px, #fff 4px);
+}
+
+#access_top 
+{
+	background-image: linear-gradient(45deg, transparent 13px, #ccc 13px, #ccc 15px, transparent 0), linear-gradient(-45deg, white 13px, #ccc 13px, #ccc 15px, white 0);
+}
+  
+}
+
+
+
+
+
+/* ---------------------------------------
+Footer
+----------------------------------------*/
+#footer 
+{
+	background: #1e1e1e;
+	padding: 0 0 30px 0;
+	color: #eee;
+	font-size: 14px;
+}
+
+#footer .footer-top 
+{
+	background: #2b2b2b;
+	display: flex;
+	flex-direction: row;
+}
+
+.footer-top  > div 
+{
+	width: 33.3%;
+	margin: 10px;
+	text-align: center;
+	font-size: 20px;
+}
+
+iframe
+{
+	height: 400px;
+	width: 400px;
+}
+
+#footer .footer-top .social-links a 
+{
+	font-family: magic;
+	font-size: 20px;
+	display: inline-block;
+	background: #383838;
+	color: white;
+	line-height: 1.5;
+	padding: 8px 0;
+	margin-right: 4px;
+	text-align: center;
+	width: 200px;
+	height: 30px;
+	text-decoration: none;
+}
+
+#footer .footer-top .social-links a:hover 
+{
+	background: #3fa338;
+	color: white;
+}
+
+#footer .copyright 
+{
+	text-align: center;
+	padding-top: 30px;
+}
+
+
+/* ------ Media Query ------*/
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) 
+{
+  
+#footer
+{
+	visibility: hidden;
+}
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+@media (min-width: 320px) and (max-width: 480px) 
+{
+  
+#footer
+{
+	visibility: hidden;
+}
+  
+}
+
+
+
+
+
+/* ---------------------------------------
+Buton
+----------------------------------------*/
+.button 
+{
+	padding: 15px 25px;
+	font-size: 15px;
+	text-align: center;
+	cursor: progress;
+	outline: none;
+	background-color: #3e8e41;
+	border: none;
+	border-radius: 50%;
+}
+
+.button a
+{
+	text-decoration: none;
+	color: white;
+}
+
+.button:hover 
+{
+	background-color: white;
+}
+
+.button a:hover
+{
+	text-decoration: none;
+	color: black;
+}
+
+.button:active 
+{
+	background-color: #3e8e41;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px); /* Verticală - să pară că se adâncește */
+}
+
+
+
+
+
+/* ---------------------------------------
+Main Body
+----------------------------------------*/
+.img1
+{
+	float: left;
+	display: block;
+	width: 20%;
+	height: auto;
+	padding-left: 10px;
+	padding-right: 20px;
+}
+
+.clearfix
+{
+	overflow: auto;
+}
+
+.img2
+{
+	height: 200px;
+	width: auto;
+	position: absolute;
+	top: 250px;
+	animation-name: zboara;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes zboara
+{
+	from {left: -100px;}
+	to {left: 1030px;}
+}
+
+div#peste
+{
+	background-image: url("../uploads/Imagini/poza.jpg");
+	background-attachment: fixed;
+	opacity: 1;
+}
+
+p#nu
+{
+	color: white;
+	font-size: 25px;
+}
+
+
+
+/* ------ Media Query ------*/
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) 
+{
+  
+.img2
+{
+	top: 300px;
+}
+
+div#peste
+{
+	background: none;
+}
+
+p#nu
+{
+	color: black;
+	font-size: 15px;
+}
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+@media (min-width: 320px) and (max-width: 480px) 
+{
+  
+.img2
+{
+	top: 475px;
+}
+
+div#peste
+{
+	background: none;
+}
+
+p#nu
+{
+	color: black;
+	font-size: 15px;
+}
+  
+}
+
+.grid-container 
+{
+	display: grid;
+	grid-template-columns: auto auto auto; /* 3 griduri, mărime auto, determinată de mărimea containerului */
+	background-color: white;
+	padding: 10px;
+}
+.grid-item1 
+{
+	background-image: url("../uploads/Imagini/gold.gif");
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: 450px auto;
+	border: 1px solid rgba(0, 0, 0, 0.8);
+	padding: 20px;
+	font-size: 20px;
+	text-align: center;
+}
+.grid-item2 
+{
+	border: 1px solid rgba(0, 0, 0, 0.8);
+	padding: 20px;
+	font-size: 20px;
+	text-align: center;
+}
+.grid-item3 
+{
+	background-image: url("../uploads/Imagini/dh.gif");
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: 100px auto;
+	border: 1px solid rgba(0, 0, 0, 0.8);
+	padding: 20px;
+	font-size: 20px;
+	text-align: center;
+}
+
+.img3
+{
+	height: 200px;
+	width: auto;
+	position: absolute;
+	top: 500px;
+	animation-name: zboara1;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes zboara1
+{
+	from {right: -100px;}
+	to {right: 1240px;}
+}
+
+
+/* ------ Media Query ------*/
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) 
+{
+  
+.img3
+{
+	top: 1000px;
+}
+
+h1#special-despre
+{
+	font-family: "Open Sans", sans-serif;
+	color: black;
+	font-size: 25px;
+	margin-top: 120px;
+}
+
+.grid-container
+{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr)); /* fr - free space*/
+	grid-gap: 1rem; /* rem - relativ la mărimea curentă html; em - relativ la mărime container */
+}
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+@media (min-width: 320px) and (max-width: 480px) 
+{
+  
+.img3
+{
+	top: 1125px;
+}
+
+h1#special-despre
+{
+	font-family: "Open Sans", sans-serif;
+	color: black;
+	font-size: 25px;
+	margin-top: 120px;
+}
+
+.grid-container
+{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr)); /* fr - free space*/
+	grid-gap: 1rem; /* Em - relativ la mărimea curentă */
+}
+
+.grid-item1, .grid-item2, .grid-item3
+{
+	font-size: 15px;
+}
+  
+}
+
+section#despre
+{
+	background-image: url("../uploads/Imagini/map.gif");
+	background-repeat: no-repeat;
+	background-size: 350px auto;
+	background-position: top right
+}
+
+h1#griffindor
+{
+	color: #ffc500;
+	background-color: #7f0909;
+	text-align: center;
+	padding: 10px;
+}
+
+a#gryffindor0, a#gryffindor1, a#gryffindor2
+{
+	color: #ffc500;
+	background-color: #7f0909;
+	text-align: center;
+	text-decoration: none;
+}
+
+h1#slyth
+{
+	color: #1a472a;
+	background-color: #aaaaaa;
+	text-align: center;
+	padding: 10px;
+}
+
+a#slytherin0, a#slytherin1, a#slytherin2
+{
+	color: #1a472a;
+	background-color: #aaaaaa;
+	text-align: center;
+	text-decoration: none;
+}
+
+h1#hufff
+{
+	color: #000000;
+	background-color: #eee117;
+	text-align: center;
+	padding: 10px;
+}
+
+a#hufff0, a#hufff1, a#hufff2
+{
+	color: #000000;
+	background-color: #eee117;
+	text-align: center;
+	text-decoration: none;
+}
+
+h1#raven
+{
+	color: #946b2d;
+	background-color: #222f5b;
+	text-align: center;
+	padding: 10px;
+}
+
+a#raven0, a#raven1, a#raven2
+{
+	color: #946b2d;
+	background-color: #222f5b;
+	text-align: center;
+	text-decoration: none;
+}
+
+.img_dr
+{
+	float: right;
+	display: block;
+	width: 20%;
+	height: auto;
+}
+
+
+div.template_user
+{
+	width: 100%;
+	margin-bottom: 2em;
+}
+
+.vrajitor
+{
+	border: 1px solid grey;
+	border-radius: 25px;
+	box-shadow: 5px 5px 5px black;
+	background-image: linear-gradient(green, white 2em);
+	padding: 1em;
+	height: 200px;
+}
+
+.vrajitor img
+{
+	float: right;
+	max-width: 20%;
+}
+
+
+
+form#login
+{
+	margin-bottom:	10px;
+}
+form.date p
+{
+	margin-top:1em;
+	margin-bottom:1em;
+}
+
+p.salut
+{
+	position: absolute;
+	border-bottom:2px inset grey;
+	border-right:2px inset grey;
+	padding-left: 0.5em;
+	width:100px;
+	border-bottom-right-radius:25px;
+	background:white;
+}
+
+.afisaj
+{
+	border:1px solid grey;
+	border-radius:20px;
+	padding:10px;
+}

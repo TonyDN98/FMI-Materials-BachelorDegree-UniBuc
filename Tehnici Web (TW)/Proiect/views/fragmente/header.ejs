@@ -1,0 +1,32 @@
+<div id="container">
+
+		<a href="#meniu" id="access_nav" class="access_aid"></a>
+		
+		<nav id="meniu">
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/detalii">Detalii</a></li>
+				<li><a href="/bun">Magie</a>
+				<li id="special"><a>Case</a>
+					<ul>
+						<li id="griff"><a href="/griff">Griffindor</a></li>
+						<li id="slyh"><a href="/slyh">Slytherin</a></li>
+						<li id="rclaw"><a href="/rclaw">Ravenclaw</a></li>
+						<li id="huff"><a href="/huff">Hufflepuff</a></li>
+					</ul>
+				</li>
+				<li><a href="/inregistrare_vrajitori">SingIn</a></li>
+				<% if(locals.user && user.rol=="admin"){ %>
+				<li><a href="/vrajitori">Listă</a></li>
+				<% } %>
+				
+				<% if(locals.user){ %>
+				<li><a href="/logout">Logout</a></li>
+				<% } %>
+			</ul>
+			<a href="#body" id="access_top" class="access_aid"></a>
+		</nav>
+	
+		<a href="/"><img src="../../uploads/Imagini/logo.png" id="logo" alt="Harry Potter Logo" title="Logo Harry Potter"></a>	
+		
+</div>

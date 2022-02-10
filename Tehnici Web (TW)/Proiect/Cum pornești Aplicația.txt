@@ -1,0 +1,4 @@
+Shift + Click Dreapta în folder (nu pe vreun element, în folderul propriu-zis)
+Click pe Open with Power Shell
+În Power Shell: node app.js
+Dupã în Chrome: localhost:934

@@ -1,0 +1,80 @@
+-- Ex1
+/* acvariu : 1pk
+client: 1pk
+crescut: 1pk, 2fk
+cumpara: 1pk, 2fk
+peste: 1pk, 2fk
+
+*/
+
+
+-- Ex2
+-- CUMPARA -> tabel asociativ (deci fk restraints)
+SELECT *
+FROM USER_CONSTRAINTS;
+
+ALTER TABLE cumpara
+ADD CONSTRAINT pk_cod_p_cod_c
+PRIMARY KEY (cod_peste, cod_client);
+
+ALTER TABLE cumpara
+ADD CONSTRAINT fk_cod_p
+FOREIGN KEY (cod_peste) REFERENCES PESTE(cod_peste);
+
+ALTER TABLE cumpara
+ADD CONSTRAINT fk_cod_c
+FOREIGN KEY (cod_client) REFERENCES CLIENT(cod_client);
+
+
+-- Ex3
+-- UNION ALL este reuniune de multimi (dar apar si dublurile) din ambele tabele (fie A, fie B); JOIN combină datele dupa ceva comun
+select cod_acvariu, cod_peste
+from acvariu
+full outer join crescut using (cod_acvariu);
+
+select cod_acvariu
+from acvariu
+union all
+select cod_peste
+from crescut;
+
+
+-- Ex4
+ALTER TABLE CRESCUT
+ADD CONSTRAINT fk_cod_acvariu
+FOREIGN KEY (cod_acvariu) REFERENCES ACVARIU(COD_ACVARIU)
+ON DELETE CASCADE;
+
+DELETE FROM ACVARIU
+WHERE COD_ACVARIU = 1;
+
+SELECT *
+FROM CRESCUT;
+
+
+-- Ex5
+select cod_acvariu
+from acvariu
+where cod_acvariu = 1;
+
+select cod_acvariu
+from acvariu
+group by cod_acvariu
+having cod_acvariu = 1;
+
+
+-- Ex6
+WITH p as (select *
+            from peste
+               order by '%&var%')
+select *
+from p
+where rownum in (1, 4, 5, 8, 9);
+
+
+-- Ex7
+INSERT INTO CRESCUT
+SELECT COD_ACVARIU, COD_PESTE, SYSDATE, SYSDATE + 1
+FROM ACVARIU JOIN CRESCUT USING (COD_ACVARIU)
+JOIN PESTE USING (COD_PESTE)
+GROUP BY COD_ACVARIU, COD_PESTE, SYSDATE, SYSDATE + 1;
