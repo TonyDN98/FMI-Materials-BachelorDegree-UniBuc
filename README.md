@@ -10,6 +10,12 @@ O carte foarte bună pentru a te pregăti pentru interviuri este `*Cracking the 
 
 ©DLarisa
 <br/><br/><br/>
+## Bachelor's Thesis: Securing Information Using Steganographic Techniques (2021)
+Am adăugat în acest [repo](https://github.com/DLarisa/Bachelor-Thesis) licența mea din 2021, lucrare și cod, pentru cei interesați. Titlul lucrării: *Securizarea Informațiilor folosind Tehnici Steganografice*
+> I added in this [repo](https://github.com/DLarisa/Bachelor-Thesis) my Bachelor's Thesis (paper + code), for those interested. The paper is written in Romanian.
+
+©DLarisa
+<br/><br/><br/>
 
 
 ## 1. *An I*:
