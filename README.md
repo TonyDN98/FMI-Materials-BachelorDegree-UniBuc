@@ -1,9 +1,10 @@
-# FMI Materials (2018 - 2021)
-Materiale pt Facultatea de Matematică și Informatică, specializarea Informatică
+# FMI(UniBuc) Materials (2018 - 2021) - Bachelor's Degree: Computer Science / Informatics
+Materiale pentru Facultatea de Matematică și Informatică, specializarea Informatică (2018 - 2021) - Universitatea București.
+*Materials for Faculty of Mathematics and Informatics, Computer Science (2018 - 2021) - University of Bucharest*
 Puteți folosi aceste materiale, cu condiția de a menționa sursa și autorul.
-Copyright - DLarisa
+*You may use these materials provided that the source and the author are mentioned.*
+©DLarisa
 
-Resources for Faculty of Mathematics and Computer Science (University of Bucharest)
 
 
 ## 1. *An I*:
