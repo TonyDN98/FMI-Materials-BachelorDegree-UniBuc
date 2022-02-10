@@ -1,10 +1,10 @@
 # FMI(UniBuc) Materials (2018 - 2021) - Bachelor's Degree: Computer Science / Informatics 
 Materiale pentru Facultatea de Matematică și Informatică, specializarea Informatică (2018 - 2021) - Universitatea București. <br/>
-*Materials for Faculty of Mathematics and Informatics, Computer Science (2018 - 2021) - University of Bucharest* <br/>
+> *Materials for Faculty of Mathematics and Informatics, Computer Science (2018 - 2021) - University of Bucharest* <br/>
 Puteți folosi aceste materiale, cu condiția de a menționa sursa și autorul. <br/>
-*You may use these materials provided that the source and the author are mentioned.* <br/>
+> *You may use these materials provided that the source and the author are mentioned.* <br/>
 ©DLarisa
-
+<br/><br/><br/>
 
 
 ## 1. *An I*:
@@ -50,3 +50,6 @@ Puteți folosi aceste materiale, cu condiția de a menționa sursa și autorul. 
   - [Programarea Dispozitivelor Android](https://github.com/DLarisa/FMI-Materials/tree/master/Programarea%20Dispozitivelor%20Android)
   - [Protocoale Criptografice](https://github.com/DLarisa/FMI-Materials/tree/master/Protocoale%20Criptografice)
   - [Resurse UNbreakable România 2021, sezonul primăvară - vară](https://github.com/DLarisa/FMI-Materials/tree/master/Resurse%20UNbreakable%20Rom%C3%A2nia%202021%2C%20sezonul%20prim%C4%83var%C4%83%20-%20var%C4%83)
+
+
+<br/>©DLarisa
