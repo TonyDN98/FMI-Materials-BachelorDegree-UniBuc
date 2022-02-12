@@ -16,6 +16,12 @@ Am adăugat în acest [repo](https://github.com/DLarisa/Bachelor-Thesis) licenț
 
 ©DLarisa
 <br/><br/><br/>
+## Repo Master `Security & Applied Logic (SLA)`, FMI - UniBuc (2021 - 2023)
+Am creat acest [repo](https://github.com/DLarisa/SAL-Materials-FMI-Master-Degree) care va conține toate resursele pe care le-am adunat în cadrul masterului de `Securitate și Logică Aplicată (SAL) - ținut în engleză` (2021 - 2023) din cadrul Facultății de Matematică & Informatică, Universitatea București. Toți cei interesați să urmeze acest master, își pot forma o idee generală legată de el.
+> I created this [repo](https://github.com/DLarisa/SAL-Materials-FMI-Master-Degree) which will contain all my resources for the SLA master (Faculty of Mathematics & Informatics, University of Bucharest - master is taught in English).
+
+©DLarisa
+<br/><br/><br/>
 
 
 ## 1. *An I*:
