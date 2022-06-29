@@ -1,4 +1,4 @@
-//Pt apel: ggc -o w babyshell.c -lreadline
+//Pt apel: gcc -o w babyshell.c -lreadline
 /*
     Studenți:   AB Mihaela
                 DLarisa
