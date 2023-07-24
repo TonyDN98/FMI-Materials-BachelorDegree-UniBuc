@@ -1,6 +1,6 @@
 # FMI(UniBuc) Materials (2018 - 2021) - Bachelor's Degree: Computer Science / Informatics 
-Materiale pentru Facultatea de Matematică și Informatică, specializarea Informatică (2018 - 2021) - Universitatea București. <br/>
-> *Materials for Faculty of Mathematics and Informatics, Computer Science (2018 - 2021) - University of Bucharest* <br/> 
+Materiale pentru Facultatea de Matematică și Informatică, specializarea Informatică (2018 - 2021) - Universitatea București. Update 2023: am adăugat și o listă cu niște [repo-uri similare](https://github.com/DLarisa/FMI-Materials-BachelorDegree-UniBuc/blob/master/Link-uri%20Utile%20-%20Repo-uri%20Similare.md). <br/>
+> *Materials for Faculty of Mathematics and Informatics, Computer Science (2018 - 2021) - University of Bucharest*. Update 2023: I've added a list with some similar [repos](https://github.com/DLarisa/FMI-Materials-BachelorDegree-UniBuc/blob/master/Link-uri%20Utile%20-%20Repo-uri%20Similare.md). <br/> 
 
 Puteți folosi aceste materiale, cu condiția de a menționa sursa și autorul. <br/>
 > *You may use these materials provided that the source and the author are mentioned.* <br/> 
